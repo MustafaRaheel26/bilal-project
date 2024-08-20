@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wise I-Tech - Digital Agency</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.4/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet">
+    <style>
+        /* Custom card hover effect */
+        .card {
+            background-color: #f5f5f5;
+            transition: transform 0.3s, background-color 0.3s;
+            color: black;
+        }
+
+        .card.active {
+            background-color: #868485;
+            color: white;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+        .work-img {
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .work-img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+
+    <!-- Navbar -->
+    <nav class="navbar bg-black text-white sticky top-0 z-50 py-6">
+        <div class="container mx-auto flex justify-between items-center p-6">
+            <a href="#" class="text-white font-bold text-2xl">Wise I-tech</a>
+            <div class="hidden md:flex space-x-6 text-lg text-white">
+                <a href="#" class="hover:text-pink-500">Home</a>
+                <a href="#" class="hover:text-pink-500">About</a>
+                <a href="#" class="hover:text-pink-500">Client</a>
+                <a href="#" class="hover:text-pink-500">Blog</a>
+                <a href="#" class="hover:text-pink-500">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="flex items-center justify-center bg-black min-h-screen text-center px-4 ">
+        <div>
+            <h1 class="text-4xl md:text-6xl font-bold text-white">We're a digital agency.</h1>
+            <button class="btn btn-outline border-pink-500 text-white mt-6 hover:bg-pink-500">Getting Started</button>
+        </div>
+    </section>
+
+    <!-- Future Vision, Product Design, Innovative Solutions Section -->
+    <section class="py-16 px-4 bg-gray-100">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="card p-8 rounded-lg text-center shadow-md" onclick="selectCard(this)">
+                <img src="./assets/Card-1.PNG" alt="Future Vision Icon">
+                <h2 class="text-2xl font-bold mt-4">Future Vision</h2>
+                <p class="mt-4">It is a long established fact that a reader will be distracted by readable content.</p>
+            </div>
+            <div class="card p-8 rounded-lg text-center shadow-md" onclick="selectCard(this)">
+                <img src="./assets/card-2.jpg" alt="Product Design Icon">
+                <h2 class="text-2xl font-bold mt-4">Product Design</h2>
+                <p class="mt-4">There are many variations of passages, the majority altered in some form.</p>
+            </div>
+            <div class="card p-8 rounded-lg text-center shadow-md" onclick="selectCard(this)">
+                <img src="./assets/card-3.webp" alt="Innovative Solutions Icon">
+                <h2 class="text-2xl font-bold mt-4">Innovative Solutions</h2>
+                <p class="mt-4">The generated Lorem Ipsum is always free from repetition, injected humor.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Services</h2>
+            <p class="text-lg mb-12 text-gray-600">WE WORK WITH YOU, NOT FOR YOU</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card bg-gray-100 p-8 rounded-lg shadow-lg hover:bg-gray-500 hover:text-white transition duration-300">
+                    Graphic Designing
+                </div>
+                <div class="service-card bg-gray-100 p-8 rounded-lg shadow-lg hover:bg-gray-500 hover:text-white transition duration-300">
+                    UX Design
+                </div>
+                <div class="service-card bg-gray-100 p-8 rounded-lg shadow-lg hover:bg-gray-500 hover:text-white transition duration-300">
+                    UI Design
+                </div>
+                <div class="service-card bg-gray-100 p-8 rounded-lg shadow-lg hover:bg-gray-500 hover:text-white transition duration-300">
+                    Web Development
+                </div>
+                <div class="service-card bg-gray-100 p-8 rounded-lg shadow-lg hover:bg-gray-500 hover:text-white transition duration-300">
+                    Design & Concept
+                </div>
+                <div class="service-card bg-gray-100 p-8 rounded-lg shadow-lg hover:bg-gray-500 hover:text-white transition duration-300">
+                    Social Media
+                </div>
+                <div class="service-card bg-gray-100 p-8 rounded-lg shadow-lg hover:bg-gray-500 hover:text-white transition duration-300">
+                    Digital Strategy
+                </div>
+                <div class="service-card bg-gray-100 p-8 rounded-lg shadow-lg hover:bg-gray-500 hover:text-white transition duration-300">
+                    SEO Optimization
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Works</h2>
+            <p class="text-lg mb-12 text-gray-600">THINGS WE'VE MADE</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <img src="./assets/gentium1.PNG" alt="Work 1" class="work-img w-full h-64 rounded-lg shadow-lg">
+                <img src="./assets/gentium1.PNG" alt="Work 2" class="work-img w-full h-64 rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 text-center text-white">
+        <div class="container mx-auto">
+            <p class="text-2xl mb-4">Let's Talk?</p>
+            <button class="btn btn-outline border-pink-500 text-white hover:bg-pink-500">Make an enquiry!</button>
+            <div class="mt-8">
+                <p>Berlin: +21 30 310 0010</p>
+                <p>Melbourne: +21 201 161 0011</p>
+                <p class="mt-8">2018 © Gentium. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for Interactive Cards -->
+    <script>
+        function selectCard(cardElement) {
+            const allCards = document.querySelectorAll('.card');
+            allCards.forEach(card => card.classList.remove('active')); // Remove active state from all cards
+            cardElement.classList.add('active'); // Add active state to clicked card
+        }
+    </script>
+
+</body>
+</html>
+
+
